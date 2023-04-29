@@ -1,0 +1,40 @@
+.sliderContainer, .d-block {
+    width: 90%;
+    border-radius: 30px;
+}
+.d-block {
+    filter: brightness(.5);
+}
+.slider-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.card-image {
+    height: 200px;
+    object-fit: cover;
+}
+.piece {
+    box-shadow: -2px 2px 9px 0px rgba(0, 0, 0, 0.15);
+}
+.food-name {
+    font-weight: 400;
+    font-size: 16px;
+}
+.food-price {
+    font-weight: bold;
+    font-size: 19px;
+}
+.judul {
+    margin-bottom: 2%;
+}
+.food-rating {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.food-rating > span {
+    font-weight: 300;
+    font-size: 15px;
+    color: rgb(136, 134, 134);
+}
