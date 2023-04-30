@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import data from './Data';
+import { Button } from 'react-bootstrap';
 
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
@@ -25,6 +26,7 @@ function GroupExample() {
                                     <img width={20} src="https://img.icons8.com/fluency/48/null/star.png" alt="Rating image" />
                                     <span>{list.rating} | Terjual {list.terjual}</span>
                                 </Card.Text>
+                            <Button variant="outline-success">Tambah</Button>
                             </Card.Body>
                         </Card>
                     </Col>
