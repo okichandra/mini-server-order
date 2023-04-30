@@ -1,13 +1,14 @@
 import NavigationBar from './Navbar'
-import DarkVariantExample from './Slider'
 import GroupExample from './Card'
 
 function App() {
   return (
     <>
       <NavigationBar />
-      <DarkVariantExample />
+      <div className="orderingPage">
       <GroupExample />
+      <section className="rightPage"></section>
+      </div>
     </>
   )
 }

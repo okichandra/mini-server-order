@@ -1,15 +1,3 @@
-.sliderContainer, .d-block {
-    width: 90%;
-    border-radius: 30px;
-}
-.d-block {
-    filter: brightness(.5);
-}
-.slider-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-}
 .card-image {
     height: 200px;
     object-fit: cover;
@@ -37,4 +25,20 @@
     font-weight: 300;
     font-size: 15px;
     color: rgb(136, 134, 134);
+}
+.orderingPage {
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+.rightPage {
+    border: 1px solid black;
 }
