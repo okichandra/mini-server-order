@@ -78,7 +78,7 @@ let data = [
         terjual: 0,
         waktuMasak: 15,
         gambar:
-            "https://img.kurio.network/rlKzeW_1_iLZ-JMm9fFHX-rGdIE=/1200x1200/filters:quality(80)/https://kurio-img.kurioapps.com/22/06/22/53264347-b7ba-4257-852d-04e3d1b4e4e5.jpe",
+            "https://asset.kompas.com/crops/-2rCRJYUJOD4GbrHI-7IoHlDU1w=/0x0:4320x2880/780x390/data/photo/2020/03/27/5e7d670354c30.jpg",
     },
     {
         nama: "Ayam Goreng",

@@ -1,15 +1,12 @@
-.sliderContainer, .d-block {
-    width: 90%;
-    border-radius: 30px;
+:root {
+    --white: #fff;
+    --light: #2C74B3;
+    --second: #205295;
+    --semi: #144272;
+    --dark: #0A2647;
 }
-.d-block {
-    filter: brightness(.5);
-}
-.slider-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-}
+
+
 .card-image {
     height: 200px;
     object-fit: cover;
@@ -37,4 +34,90 @@
     font-weight: 300;
     font-size: 15px;
     color: rgb(136, 134, 134);
+}
+.orderingPage {
+    display: flex;
+}
+.rightPage {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+} 
+.unvisible {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.maincomp {
+    display: flex;
+}
+.notif {
+    background-color: var(--white);
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 9;
+    height: inherit;
+    transition: .3s;
+    border: 2px solid var(--light);
+    border-radius: 40px;
+    filter: drop-shadow(-3px 3px 18px rgba(0, 0, 0, 0.15));
+}
+.notif_mess {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.prepare {
+    height: 100%;
+    text-align: left;
+    padding: 4% 0;
+    color: var(--second);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.listContainer {
+    margin-top: 2%;
+    box-shadow: -1px 1px 9px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    height: auto;
+    padding: 0 3%;
+    height: 80px;
+}
+.listContainer > img {
+    object-fit: cover;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+.listData {
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+.adjust {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin-left: auto;
+}
+.item_nama {
+    font-weight: 400;
+    font-size: 14px;
+}
+.item_harga {
+    font-weight: bold;
+    font-size: 14px;
+}
+.item_waktu {
+    font-weight: 100;
+    font-size: 14px;
+    color: var(--dark);
 }

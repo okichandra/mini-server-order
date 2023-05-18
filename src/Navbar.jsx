@@ -8,7 +8,7 @@ function NavigationBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="#">Oki Place</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -16,10 +16,10 @@ function NavigationBar() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
+                        <Nav.Link href="#action1">About</Nav.Link>
+                        <Nav.Link href="#action2">Join Our Member</Nav.Link>
                         <Nav.Link href="#" disabled>
-                            Link
+                            Cafe & Resto
                         </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
