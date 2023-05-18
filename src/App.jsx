@@ -5,10 +5,7 @@ function App() {
   return (
     <>
       <NavigationBar />
-      <div className="orderingPage">
-      <GroupExample />
-      <section className="rightPage"></section>
-      </div>
+        <GroupExample />
     </>
   )
 }
