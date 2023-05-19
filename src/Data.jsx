@@ -167,7 +167,7 @@ let data = [
         terjual: 0,
         waktuMasak: 40,
         gambar:
-            "https://www.bango.co.id/gfx/recipes/1431991765.jpg",
+            "https://www.warisankuliner.com/gfx/recipes/1431991765.jpg",
     },
     {
         nama: "Sayur Asem",

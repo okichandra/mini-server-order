@@ -13,10 +13,8 @@ export default class RightSide extends Component {
     setDisplay() {
         if (!this.state.isOpened) {
             this.setState({ isOpened: !this.state.isOpened })
-            console.log(this.state.isOpened)
         } else {
             this.setState({ isOpened: !this.state.isOpened })
-            console.log(this.state.isOpened)
         }
     }
     render() {
@@ -39,7 +37,7 @@ export default class RightSide extends Component {
                         this.setState({isOpened: !this.state.isOpened})
                     }
                 }}>
-                    <span className='notif_mess mb-2'>Makanan yang anda pesan: {kirimData.length}</span>
+                    <span className='notif_mess mb-2'>Lihat Makanan({kirimData.length})</span>
                     {this.state.isOpened ? <ShowMenu itemList={kirimData} /> : ''}
                 </div>
             </div>
