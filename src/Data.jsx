@@ -2,6 +2,7 @@ let data = [
     {
         nama: "Nasi Goreng",
         harga: 15000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 10,
@@ -11,6 +12,7 @@ let data = [
     {
         nama: "Sate Ayam",
         harga: 20000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 15,
@@ -20,6 +22,7 @@ let data = [
     {
         nama: "Bakso",
         harga: 15000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 10,
@@ -29,6 +32,7 @@ let data = [
     {
         nama: "Mie Ayam",
         harga: 18000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 10,
@@ -38,6 +42,7 @@ let data = [
     {
         nama: "Soto Ayam",
         harga: 25000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 20,
@@ -47,6 +52,7 @@ let data = [
     {
         nama: "Nasi Padang",
         harga: 35000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 25,
@@ -56,6 +62,7 @@ let data = [
     {
         nama: "Mie Goreng",
         harga: 20000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 10,
@@ -65,6 +72,7 @@ let data = [
     {
         nama: "Nasi Uduk",
         harga: 12000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 15,
@@ -74,6 +82,7 @@ let data = [
     {
         nama: "Gado-gado",
         harga: 20000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 15,
@@ -83,6 +92,7 @@ let data = [
     {
         nama: "Ayam Goreng",
         harga: 18000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 12,
@@ -92,6 +102,7 @@ let data = [
     {
         nama: "Nasi Kuning",
         harga: 15000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 20,
@@ -100,6 +111,7 @@ let data = [
     {
         nama: "Pecel",
         harga: 12000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 10,
@@ -109,6 +121,7 @@ let data = [
     {
         nama: "Soto Betawi",
         harga: 30000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 25,
@@ -118,6 +131,7 @@ let data = [
     {
         nama: "Martabak",
         harga: 25000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 20,
@@ -127,6 +141,7 @@ let data = [
     {
         nama: "Bubur Ayam",
         harga: 12000,
+        porsi: 1,
         rating: 6,
         terjual: 0,
         waktuMasak: 10,
@@ -136,6 +151,7 @@ let data = [
     {
         nama: "Capcay",
         harga: 20000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 15,
@@ -145,6 +161,7 @@ let data = [
     {
         nama: "Sate Kambing",
         harga: 25000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 20,
@@ -154,6 +171,7 @@ let data = [
     {
         nama: "Rawon",
         harga: 25000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 30,
@@ -163,6 +181,7 @@ let data = [
     {
         nama: "Sop Buntut",
         harga: 35000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 40,
@@ -172,6 +191,7 @@ let data = [
     {
         nama: "Sayur Asem",
         harga: 18000,
+        porsi: 1,
         rating: 7,
         terjual: 0,
         waktuMasak: 20,
@@ -181,6 +201,7 @@ let data = [
     {
         nama: "Gudeg",
         harga: 20000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 45,
@@ -190,6 +211,7 @@ let data = [
     {
         nama: "Sop Iga",
         harga: 30000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 30,
@@ -199,6 +221,7 @@ let data = [
     {
         nama: "Rendang",
         harga: 35000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 50,
@@ -208,6 +231,7 @@ let data = [
     {
         nama: "Nasi Goreng Seafood",
         harga: 28000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 20,
@@ -217,6 +241,7 @@ let data = [
     {
         nama: "Sate Padang",
         harga: 25000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 20,
@@ -226,6 +251,7 @@ let data = [
     {
         nama: "Nasi Campur Bali",
         harga: 30000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 35,
@@ -235,6 +261,7 @@ let data = [
     {
         nama: "Sop Kambing",
         harga: 35000,
+        porsi: 1,
         rating: 9,
         terjual: 0,
         waktuMasak: 40,
@@ -244,6 +271,7 @@ let data = [
     {
         nama: "Nasi Liwet",
         harga: 25000,
+        porsi: 1,
         rating: 8,
         terjual: 0,
         waktuMasak: 25,
