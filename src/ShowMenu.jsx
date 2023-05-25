@@ -1,36 +1,49 @@
 import React, { Component } from 'react'
 import down from './assets/image/down.svg'
 import up from './assets/image/up.svg'
+import data from './Data'
+
 export default class ShowMenu extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+            itemList: this.props.itemList,
         }
     }
+
     formatNumber(num) {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
     }
 
-    // makeChange(type, item) {
-    //     if(type === 'up') {
-    //         console.log("Naik")
-    //         item.porsi += 1
-    //         console.log(item.porsi)
-    //     }else{
-    //         console.log("Turun")
-    //     }
-    // }
+    sesuaikanPorsi(params) {
+        const edited = this.state.itemList.map(item => {
+            if (item.nama !== params.nama) return item
+            return {
+                ...item,
+                porsi: item.porsi + 1,
+            }
+        })
+        this.setState({
+            itemList: edited
+        })
+        for (const element of data) {
+            if (element.nama === params.nama) {
+                element.porsi += 1
+            }
+        }
+    }
 
     render() {
-        const { itemList } = this.props;
-        let maxPreview = 4  
+        const { itemList } = this.state;
+        let maxPreview = 6
         let preview = [...itemList]
+
         if (preview.length > maxPreview) {
             let index = preview.length
             preview.splice(0, index - maxPreview)
         }
-        console.log(this.state.makanan)
+
         return (
             <div className='prepare'>
                 <div className="list_holder">
@@ -45,13 +58,9 @@ export default class ShowMenu extends Component {
                                     <span className='item_waktu'>Waktu pembuatan {item.waktuMasak} menit</span>
                                 </div>
                                 <div className="adjust">
-                                    <img src={down} alt="down" onClick={() => {
-                                        item.porsi -= 1 
-                                    }}/>
+                                    <img src={down} alt="down" />
                                     <span>{item.porsi}</span>
-                                    <img src={up} alt="up" onClick={() => {
-                                        item.porsi += 1
-                                    }} />
+                                    <img src={up} alt="up" onClick={() => this.sesuaikanPorsi(item)} />
                                 </div>
                             </div>
                         ))
@@ -63,7 +72,9 @@ export default class ShowMenu extends Component {
                     <div className="sumPrice">
                         <span>Total</span>
                         <span>Rp {
-                            itemList.reduce((pratialSum, item) => pratialSum + (item.harga * item.porsi), 0)
+                            this.formatNumber(
+                                itemList.reduce((pratialSum, item) => pratialSum + (item.harga * item.porsi), 0)
+                            )
                         }</span>
                     </div>
                     <button>Kirim Pesanan</button>

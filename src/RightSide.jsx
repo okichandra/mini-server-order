@@ -38,7 +38,7 @@ export default class RightSide extends Component {
                     }
                 }}>
                     <span className='notif_mess mb-2'>Lihat Makanan({kirimData.length})</span>
-                    {this.state.isOpened ? <ShowMenu itemList={kirimData} /> : ''}
+                    {this.state.isOpened ? <ShowMenu setDisplay={this.setDisplay} itemList={kirimData} /> : ''}
                 </div>
             </div>
         )
