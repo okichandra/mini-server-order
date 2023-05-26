@@ -16,12 +16,26 @@ export default class ShowMenu extends Component {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
     }
 
-    sesuaikanPorsi(params) {
+    sesuaikanPorsi(params, tipe) {
+
         const edited = this.state.itemList.map(item => {
             if (item.nama !== params.nama) return item
-            return {
-                ...item,
-                porsi: item.porsi + 1,
+            if (tipe === 'up') {
+                return {
+                    ...item,
+                    porsi: item.porsi + 1,
+                }
+            } else {
+                if(item.porsi <= 0) {
+                    return {
+                        ...item,
+                        porsi: item.porsi = 0,
+                    }
+                }
+                return {
+                    ...item,
+                    porsi: item.porsi - 1,
+                }
             }
         })
         this.setState({
@@ -29,7 +43,11 @@ export default class ShowMenu extends Component {
         })
         for (const element of data) {
             if (element.nama === params.nama) {
-                element.porsi += 1
+                if (tipe === 'up') element.porsi += 1
+                else {
+                    if(element.porsi <= 0) return
+                    else element.porsi -= 1
+                }
             }
         }
     }
@@ -58,9 +76,9 @@ export default class ShowMenu extends Component {
                                     <span className='item_waktu'>Waktu pembuatan {item.waktuMasak} menit</span>
                                 </div>
                                 <div className="adjust">
-                                    <img src={down} alt="down" />
+                                    <img src={down} alt="down" onClick={() => this.sesuaikanPorsi(item, "down")} />
                                     <span>{item.porsi}</span>
-                                    <img src={up} alt="up" onClick={() => this.sesuaikanPorsi(item)} />
+                                    <img src={up} alt="up" onClick={() => this.sesuaikanPorsi(item, "up")} />
                                 </div>
                             </div>
                         ))
