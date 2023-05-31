@@ -6,10 +6,6 @@
     --dark: #0A2647;
 }
 
-body {
-    padding-bottom: 10%;
-}
-
 .logo{
     border-radius: 50%;
 }
@@ -188,4 +184,39 @@ body {
     padding: 10px 0;
     border-radius: 42px;
     background-color: var(--light);
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 10%;
+    padding: 2%;
+    background-color: rgb(239, 239, 239);
+    color: var(--dark);
+}
+.information > img {
+    margin-right: 5px;
+}
+.social-media {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    gap: 15px;
+}
+.icon {
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    padding: 5px;
+}
+.nd {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.kantor {
+    display: flex;
+    flex-direction: row;
+}
+.kantor > img {
+    margin-right: 5px;
 }
