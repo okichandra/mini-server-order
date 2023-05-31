@@ -17,7 +17,6 @@ export default class ShowMenu extends Component {
     }
 
     sesuaikanPorsi(params, tipe) {
-
         const edited = this.state.itemList.map(item => {
             if (item.nama !== params.nama) return item
             if (tipe === 'up') {
@@ -26,7 +25,7 @@ export default class ShowMenu extends Component {
                     porsi: item.porsi + 1,
                 }
             } else {
-                if(item.porsi <= 0) {
+                if (item.porsi <= 0) {
                     return {
                         ...item,
                         porsi: item.porsi = 0,
@@ -45,7 +44,7 @@ export default class ShowMenu extends Component {
             if (element.nama === params.nama) {
                 if (tipe === 'up') element.porsi += 1
                 else {
-                    if(element.porsi <= 0) return
+                    if (element.porsi <= 0) return
                     else element.porsi -= 1
                 }
             }
@@ -54,20 +53,31 @@ export default class ShowMenu extends Component {
 
     render() {
         const { itemList } = this.state;
-        let maxPreview = 6
-        let preview = [...itemList]
+        let cooking = []
+        let timeCook = [...itemList].forEach(element => {
+            let time = element.waktuMasak
+            cooking.push(time)
+        })
+        // const findindex = arr => arr.filter((item, index) => {
+        //     return arr.indexOf(item) === index
+        // })
+        // const duplicat = findindex(itemList)
+        // let preview = [...duplicat]
 
-        if (preview.length > maxPreview) {
-            let index = preview.length
-            preview.splice(0, index - maxPreview)
-        }
+
+        // {
+        //     preview.filter(item => item.nama === item.nama).forEach(element => {
+        //         double.push(element)
+        //         console.log(double)
+        //     })
+        // }
 
         return (
             <div className='prepare'>
                 <div className="list_holder">
-                    <span>list makanan anda</span>
+                    <span>list menu anda</span>
                     {
-                        preview.map((item) => (
+                        itemList.map((item) => (
                             <div className="listContainer">
                                 <img src={item.gambar} alt="" />
                                 <div className="listData">
@@ -84,7 +94,7 @@ export default class ShowMenu extends Component {
                         ))
                     }
                     <span>Lihat Semua</span>
-                    <p>pesanan akan diantar dalam Nan Menit</p>
+                    <p>pesanan akan diantar dalam {Math.max(...cooking)} Menit</p>
                 </div>
                 <div className="bottom_menu">
                     <div className="sumPrice">

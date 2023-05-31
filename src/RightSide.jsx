@@ -19,6 +19,12 @@ export default class RightSide extends Component {
     }
     render() {
         const { kirimData } = this.props
+        const findindex = arr => arr.filter((item, index) => {
+            return arr.indexOf(item) === index
+        })
+        
+        let filteredData = [...findindex(kirimData)]
+
         const wasOpened = {
             // border: '1px solid black',
             width: this.state.isOpened ? '40%' : '',
@@ -31,14 +37,14 @@ export default class RightSide extends Component {
         }
         return (
             <div className='rightPage' style={pageContainer}>
-                <div className="unvisible"  onClick={() => this.setDisplay()}></div>
+                <div className="unvisible" onClick={() => this.setDisplay()}></div>
                 <div className="notif" style={wasOpened} onClick={() => {
-                    if(!this.state.isOpened) {
-                        this.setState({isOpened: !this.state.isOpened})
+                    if (!this.state.isOpened) {
+                        this.setState({ isOpened: !this.state.isOpened })
                     }
                 }}>
-                    <span className='notif_mess mb-2'>Lihat Makanan({kirimData.length})</span>
-                    {this.state.isOpened ? <ShowMenu setDisplay={this.setDisplay} itemList={kirimData} /> : ''}
+                    <span className='notif_mess mb-2'>Lihat Makanan({filteredData.length})</span>
+                    {this.state.isOpened ? <ShowMenu setDisplay={this.setDisplay} itemList={filteredData} /> : ''}
                 </div>
             </div>
         )
