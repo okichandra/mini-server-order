@@ -58,19 +58,6 @@ export default class ShowMenu extends Component {
             let time = element.waktuMasak
             cooking.push(time)
         })
-        // const findindex = arr => arr.filter((item, index) => {
-        //     return arr.indexOf(item) === index
-        // })
-        // const duplicat = findindex(itemList)
-        // let preview = [...duplicat]
-
-
-        // {
-        //     preview.filter(item => item.nama === item.nama).forEach(element => {
-        //         double.push(element)
-        //         console.log(double)
-        //     })
-        // }
 
         return (
             <div className='prepare'>
@@ -93,7 +80,6 @@ export default class ShowMenu extends Component {
                             </div>
                         ))
                     }
-                    <span>Lihat Semua</span>
                     <p>pesanan akan diantar dalam {Math.max(...cooking)} Menit</p>
                 </div>
                 <div className="bottom_menu">

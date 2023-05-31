@@ -22,7 +22,7 @@ function NavigationBar() {
                             Cafe & Resto
                         </Nav.Link>
                     </Nav>
-                    <Form className="d-flex">
+                    {/* <Form className="d-flex">
                         <Form.Control
                             type="search"
                             placeholder="Search"
@@ -30,7 +30,8 @@ function NavigationBar() {
                             aria-label="Search"
                         />
                         <Button variant="outline-success">Search</Button>
-                    </Form>
+                    </Form> */}
+                    <img width={40} className='logo' src="../src/assets/image/logo.png" alt="" />
                 </Navbar.Collapse>
             </Container>
         </Navbar>
