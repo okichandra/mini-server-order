@@ -71,12 +71,6 @@ export default class ShowMenu extends Component {
         //         console.log(double)
         //     })
         // }
-
-        const dark = {
-            filter: 'brightness(.7)',
-            backgroundColor: 'rgba(255, 255, 255,.2)',
-        }
-
         return (
             <div className='prepare'>
                 <div className="list_holder">
@@ -84,7 +78,7 @@ export default class ShowMenu extends Component {
                     {
                         itemList.map((item) => (
                             <div className="listContainer" style={{
-                                filter: item.porsi == 0 ? 'brightness(.7)': '',
+                                filter: item.porsi == 0 ? 'brightness(.8)': '',
                                 backgroundColor: item.porsi == 0 ? 'rgba(255, 255, 255,.2)' : '',
                             }}>
                                 <img src={item.gambar} alt="" />
