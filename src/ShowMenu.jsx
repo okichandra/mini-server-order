@@ -80,6 +80,8 @@ export default class ShowMenu extends Component {
                             <div className="listContainer" style={{
                                 filter: item.porsi == 0 ? 'brightness(.8)': '',
                                 backgroundColor: item.porsi == 0 ? 'rgba(255, 255, 255,.2)' : '',
+                                transform: item.porsi == 0 ? 'scale(.99)': '',
+                                transition: '.3s',
                             }}>
                                 <img src={item.gambar} alt="" />
                                 <div className="listData">
@@ -107,7 +109,9 @@ export default class ShowMenu extends Component {
                             )
                         }</span>
                     </div>
-                    <button>Kirim Pesanan</button>
+                    <button onClick={() => {
+                        // BUAT FUNGSI UNTUK MENGIRIM DATA DAN UNTUK FORMAT TIDAK BOLEH NOL
+                    }}>Kirim Pesanan</button>
                 </div>
             </div>
         )
