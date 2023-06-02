@@ -22,7 +22,7 @@ export default class RightSide extends Component {
         const findindex = arr => arr.filter((item, index) => {
             return arr.indexOf(item) === index
         })
-        
+
         let filteredData = [...findindex(kirimData)]
 
         const wasOpened = {
@@ -35,6 +35,7 @@ export default class RightSide extends Component {
             top: this.state.isOpened ? '5%' : '',
             transition: '.3s',
         }
+
         return (
             <div className='rightPage' style={pageContainer}>
                 <div className="unvisible" onClick={() => this.setDisplay()}></div>

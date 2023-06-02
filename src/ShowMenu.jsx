@@ -80,7 +80,7 @@ export default class ShowMenu extends Component {
                             </div>
                         ))
                     }
-                    <p>pesanan akan diantar dalam {Math.max(...cooking)} Menit</p>
+                    <p>tercepat dalam {Math.max(...cooking)} Menit</p>
                 </div>
                 <div className="bottom_menu">
                     <div className="sumPrice">

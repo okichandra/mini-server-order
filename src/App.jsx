@@ -7,7 +7,7 @@ function App() {
     <>
       <NavigationBar />
       <GroupExample />
-      <Footer/>
+      <Footer />
     </>
   )
 }

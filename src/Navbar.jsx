@@ -16,7 +16,7 @@ function NavigationBar() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">About</Nav.Link>
+                        <Nav.Link href="#footer">About</Nav.Link>
                         <Nav.Link href="#action2">Join Our Member</Nav.Link>
                         <Nav.Link href="#" disabled>
                             Cafe & Resto

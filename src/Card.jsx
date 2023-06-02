@@ -5,6 +5,7 @@ import data from './Data';
 import { Button } from 'react-bootstrap';
 import RightSide from './RightSide';
 import { useState } from 'react';
+import Footer from './Footer';
 
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
