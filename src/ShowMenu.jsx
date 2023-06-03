@@ -9,6 +9,7 @@ export default class ShowMenu extends Component {
 
         this.state = {
             itemList: this.props.itemList,
+            rejected: false,
         }
     }
 
@@ -78,9 +79,9 @@ export default class ShowMenu extends Component {
                     {
                         itemList.map((item) => (
                             <div className="listContainer" style={{
-                                filter: item.porsi == 0 ? 'brightness(.8)': '',
+                                filter: item.porsi == 0 ? 'brightness(.8)' : '',
                                 backgroundColor: item.porsi == 0 ? 'rgba(255, 255, 255,.2)' : '',
-                                transform: item.porsi == 0 ? 'scale(.99)': '',
+                                transform: item.porsi == 0 ? 'scale(.99)' : '',
                                 transition: '.3s',
                             }}>
                                 <img src={item.gambar} alt="" />
@@ -111,7 +112,17 @@ export default class ShowMenu extends Component {
                     </div>
                     <button onClick={() => {
                         // BUAT FUNGSI UNTUK MENGIRIM DATA DAN UNTUK FORMAT TIDAK BOLEH NOL
+                        let zeroValue = []
+                        this.state.itemList.forEach(element => {
+                            if(element.porsi == 0) {
+                                zeroValue.push(element.porsi)
+                            }
+                        });
+                        if(zeroValue.length !== this.state.itemList.length) this.setState({rejected: false})
+                        else this.setState({rejected: true})
+                        
                     }}>Kirim Pesanan</button>
+                    {this.state.rejected ? <span className='rejected'>*untuk dapat memesan, minimal porsi satu makanan tidak 0</span> : ''}
                 </div>
             </div>
         )

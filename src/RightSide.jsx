@@ -25,7 +25,7 @@ export default class RightSide extends Component {
         
         let filteredData = [...findindex(kirimData)]
 
-        const wasOpened = {
+        const wasOpened = { 
             // border: '1px solid black',
             width: this.state.isOpened ? '40%' : '',
             height: this.state.isOpened ? '100%' : '',
