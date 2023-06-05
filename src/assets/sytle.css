@@ -163,7 +163,7 @@
 .bottom_menu {
     align-items: flex-end;
     flex-grow: 1;
-    padding-bottom: 10%;
+    padding-bottom: 2%;
     display: flex;
     flex-direction: column;
     gap: 10%;
@@ -185,7 +185,6 @@
     border-radius: 42px;
     background-color: var(--light);
 }
-
 /* Footer */
 
 .footer {
@@ -219,4 +218,9 @@
 }
 .kantor > img {
     margin-right: 5px;
+}
+.rejected {
+    font-size: 13px;
+    text-align: left;
+    color: red;
 }

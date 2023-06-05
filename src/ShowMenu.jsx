@@ -9,6 +9,7 @@ export default class ShowMenu extends Component {
 
         this.state = {
             itemList: this.props.itemList,
+            rejected: false,
         }
     }
 
@@ -58,14 +59,18 @@ export default class ShowMenu extends Component {
             let time = element.waktuMasak
             cooking.push(time)
         })
-
         return (
             <div className='prepare'>
                 <div className="list_holder">
                     <span>list menu anda</span>
                     {
                         itemList.map((item) => (
-                            <div className="listContainer">
+                            <div className="listContainer" style={{
+                                filter: item.porsi == 0 ? 'brightness(.8)' : '',
+                                backgroundColor: item.porsi == 0 ? 'rgba(255, 255, 255,.2)' : '',
+                                transform: item.porsi == 0 ? 'scale(.99)' : '',
+                                transition: '.3s',
+                            }}>
                                 <img src={item.gambar} alt="" />
                                 <div className="listData">
                                     <span className='item_nama'>{item.nama}</span>
@@ -91,7 +96,19 @@ export default class ShowMenu extends Component {
                             )
                         }</span>
                     </div>
-                    <button>Kirim Pesanan</button>
+                    <button onClick={() => {
+                        // BUAT FUNGSI UNTUK MENGIRIM DATA DAN UNTUK FORMAT TIDAK BOLEH NOL
+                        let zeroValue = []
+                        this.state.itemList.forEach(element => {
+                            if(element.porsi == 0) {
+                                zeroValue.push(element.porsi)
+                            }
+                        });
+                        if(zeroValue.length !== this.state.itemList.length) this.setState({rejected: false})
+                        else this.setState({rejected: true})
+                        
+                    }}>Kirim Pesanan</button>
+                    {this.state.rejected ? <span className='rejected'>*untuk dapat memesan, minimal porsi satu makanan tidak 0</span> : ''}
                 </div>
             </div>
         )
